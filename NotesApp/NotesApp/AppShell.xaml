@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotesApp.AppShell"
+       xmlns:views ="clr-namespace:NotesApp.Views">
+    <Shell.Resources>
+        <!-- Style Shell elements -->
+        <Style x:Key="BaseStyle"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="{StaticResource AppPrimaryColor}" />
+            <Setter Property="Shell.ForegroundColor"
+                    Value="{StaticResource SecondaryColor}" />
+            <Setter Property="Shell.TitleColor"
+                    Value="{StaticResource SecondaryColor}" />
+            <Setter Property="Shell.TabBarUnselectedColor"
+                    Value="#95FFFFFF"/>
+        </Style>
+        <Style TargetType="TabBar"
+               BasedOn="{StaticResource BaseStyle}" />
+    </Shell.Resources>
+    <TabBar>
+        <ShellContent Title="Notes"
+                      Icon="tasks.png"
+                      ContentTemplate="{DataTemplate views:NotesPage}">
+            
+        </ShellContent>
+        <ShellContent Title="About"
+                      Icon="about.png"
+                      ContentTemplate="{DataTemplate views:AboutPage}">
+            
+        </ShellContent>
+    </TabBar>
+</Shell>
