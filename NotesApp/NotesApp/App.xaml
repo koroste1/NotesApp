@@ -5,14 +5,12 @@
     <Application.Resources>
         <Thickness x:Key="PageMargin">20</Thickness>
 
-        <!-- Colors -->
         <Color x:Key="AppPrimaryColor">Black</Color>
         <Color x:Key="AppBackgroundColor">Black</Color>
         <Color x:Key="PrimaryColor">White</Color>
         <Color x:Key="SecondaryColor">White</Color>
         <Color x:Key="TertiaryColor">Silver</Color>
 
-        <!-- Implicit styles -->
         <Style TargetType="ContentPage"
                ApplyToDerivedTypes="True">
             <Setter Property="BackgroundColor"

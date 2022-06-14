@@ -4,7 +4,6 @@
              x:Class="NotesApp.Views.NoteAddingPage"
              Title="Редактирование">
     <ContentPage.Resources>
-        <!-- Implicit styles -->
         <Style TargetType="{x:Type Editor}">
             <Setter Property="BackgroundColor"
                     Value="{StaticResource AppBackgroundColor}" />

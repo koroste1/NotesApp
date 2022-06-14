@@ -4,7 +4,6 @@
              x:Class="NotesApp.Views.NotesPage"
              Title="Заметки">
     <ContentPage.Resources>
-        <!-- Define a visual state for the Selected state of the CollectionView -->
         <Style TargetType="StackLayout">
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>
@@ -28,15 +27,7 @@
     <CollectionView x:Name="collectionView"
                     Margin="{StaticResource PageMargin}"
                     SelectionMode="Single"
-                    SelectionChanged="OnSelectionChanged"
-                    >
-        <!-- <CollectionView.ItemsLayout>
-           <LinearItemsLayout 
-                Orientation="Vertical"
-                ItemSpacing="10"/>
-            <GridItemsLayout Orientation="Vertical"
-                        Span="2" />
-        </CollectionView.ItemsLayout> -->
+                    SelectionChanged="OnSelectionChanged">
         <CollectionView.ItemsLayout>
             <GridItemsLayout Orientation="Vertical"
                         Span="2"
@@ -45,38 +36,12 @@
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <!--<Grid Margin="{StaticResource PageMargin}" BackgroundColor="{StaticResource TertiaryColor}" >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="50" />
-                        <RowDefinition Height="20" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="70" />
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.ColumnSpan="1"
-                        Text="{Binding Text}"
-                           FontSize="Medium"
-                           TextColor="{StaticResource PrimaryColor}"/>
-                    <Label Grid.Row="1" 
-                        Text="{Binding Date}"
-                           TextColor="{StaticResource TertiaryColor}"
-                           FontSize="Small"/>
-                </Grid>      -->
                 <Frame BackgroundColor="#292929" Padding="4" CornerRadius="8">
                     <StackLayout Margin="12">
                         <Label Text="{Binding Text}" HorizontalOptions="Start" FontSize="18" TextColor="#f2f2f2" MaxLines="3" LineBreakMode="TailTruncation"/>
                         <Label Text="{Binding Date}" FontSize="12" TextColor="#969696"/>
                     </StackLayout>
                 </Frame>
-
-                <!--  <StackLayout>
-                    <Label Text="{Binding Text}"
-                           FontSize="Medium"
-                           TextColor="{StaticResource PrimaryColor}"/>
-                    <Label Text="{Binding Date}"
-                           TextColor="{StaticResource TertiaryColor}"
-                           FontSize="Small"/>    
-                </StackLayout>   -->
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>

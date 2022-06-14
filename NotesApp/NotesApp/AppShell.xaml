@@ -4,7 +4,6 @@
              x:Class="NotesApp.AppShell"
        xmlns:views ="clr-namespace:NotesApp.Views">
     <Shell.Resources>
-        <!-- Style Shell elements -->
         <Style x:Key="BaseStyle"
                TargetType="Element">
             <Setter Property="Shell.BackgroundColor"
