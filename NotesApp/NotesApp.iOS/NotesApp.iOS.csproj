@@ -133,4 +133,10 @@
       <Name>NotesApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tasks.png" />
+  </ItemGroup>
 </Project>
